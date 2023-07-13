@@ -13,6 +13,11 @@ export class CountriesService {
 
   constructor(private http: HttpClient) { }
 
+  getCountries(region: string):Observable<Country[]> {
+    if(region === 'Asia') return this.getAsia();
+    else return this.getEurope();
+  }
+
   getEurope(): Observable<Country[]>{
     return this.http.get<Country[]>(this.europeUrl);
   }
@@ -20,5 +25,5 @@ export class CountriesService {
  getAsia(): Observable<Country[]>{
     return this.http.get<Country[]>(this.asiaUrl);
  }
- 
+
 }
