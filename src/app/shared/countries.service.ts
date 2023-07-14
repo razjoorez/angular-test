@@ -8,8 +8,8 @@ import { Country } from '../model/country';
 })
 export class CountriesService {
 
-  europeUrl = "https://restcountries.eu/rest/v2/region/europe";
-  asiaUrl = "https://restcountries.eu/rest/v2/region/asia";
+  europeUrl = "https://restcountries.com/v2/region/europe";
+  asiaUrl = "https://restcountries.com/v2/region/asia";
 
   constructor(private http: HttpClient) { }
 

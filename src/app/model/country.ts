@@ -1,7 +1,7 @@
 export interface Country {
-    Name: string;
-    Capital: string;
-    Population: string;
-    Currencies: string;
-    Flag: string;
+    name: string;
+    capital: string;
+    population: string;
+    currencies: {name: string};
+    flag: string;
 }

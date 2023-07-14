@@ -20,12 +20,26 @@
           Regions
         </button>
         <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Action two</a></li>
-          <li><a class="dropdown-item" href="#">Action three</a></li>
+          <li  *ngFor="let reg of initRegions$ | async " (click)="selectReg(reg)" >{{reg}}</li>
+
         </ul>
       </div>
+      <div  *ngIf=" regSelected$ | async as regs "  class="countries dropdown">
+        <button class="btn btn-secondary dropdown-toggle form-control" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Countries of {{regs}}
+        </button>
+        <ul class="dropdown-menu form-control" aria-labelledby="dropdownMenuButton1">
+          <li  *ngFor="let country of countries$ | async "  (click)="selectCountry(country)" >
+            {{country.name}}
+
+          </li>
+
+        </ul>
+      </div>
+
     </div>
+
+
     <div class="col">
 
     </div>

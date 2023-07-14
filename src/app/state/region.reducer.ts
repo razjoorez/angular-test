@@ -18,11 +18,11 @@ const initialState: RegionState = {
   regionSelected: '',
   countries: [],
   countrySelected: {
-    Name: "",
-    Capital: "",
-    Population: "",
-    Currencies: "",
-    Flag: ""
+    name: "",
+    capital: "",
+    population: "",
+    currencies:{name:''},
+    flag: ""
   }
 }
 
@@ -59,11 +59,11 @@ export const regionReducer = createReducer<RegionState>(
           ...state,
           regionSelected : action.regionSelected,
           countrySelected:  {
-            Name: "",
-            Capital: "",
-            Population: "",
-            Currencies: "",
-            Flag: ""
+            name: "",
+            capital: "",
+            population: "",
+            currencies: {name: ''},
+            flag: ""
           }
       }
   }),on(regionsAction.setCountries, (state, action): RegionState => {
