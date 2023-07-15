@@ -19,7 +19,7 @@ export class CountryDetailsComponent implements OnInit {
   }
 
   home() {
-    this.router.navigate(['regions']);
+    this.router.navigate(['']);
   }
 
 }

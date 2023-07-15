@@ -18,6 +18,7 @@ export class RegionsComponent {
   regSelected$!: Observable<any>;
   countries$!: Observable<Country[]>;
   countrySelected!: {};
+  regionSelected:boolean = false;
 
   constructor(private store: Store<State> ,
     private countryService: CountriesService,
@@ -33,7 +34,9 @@ export class RegionsComponent {
     if(region ==='Europe')
     this.store.dispatch(regionsActions.getEurope());
     if(region==='Asia') this.store.dispatch(regionsActions.getAsia());
-    this.countries$ = this.countryService.getCountries(region)
+    this.countries$ = this.countryService.getCountries(region);
+    this.regionSelected = true;
+
   }
 
   selectCountry(country: Country){
