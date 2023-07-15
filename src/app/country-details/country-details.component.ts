@@ -15,11 +15,13 @@ export class CountryDetailsComponent implements OnInit {
   constructor(private store: Store<State>,
     private router: Router) { }
   ngOnInit(): void {
-    this.country$ = this.store.select(getCountry)
+    this.country$ = this.store.select(getCountry);
+
   }
 
   home() {
     this.router.navigate(['']);
   }
 
+  
 }

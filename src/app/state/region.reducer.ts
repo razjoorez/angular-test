@@ -21,7 +21,7 @@ const initialState: RegionState = {
     name: "",
     capital: "",
     population: "",
-    currencies:{name:''},
+    currencies:[{name:''}],
     flag: ""
   }
 }
@@ -62,7 +62,7 @@ export const regionReducer = createReducer<RegionState>(
             name: "",
             capital: "",
             population: "",
-            currencies: {name: ''},
+            currencies: [{name: ''}],
             flag: ""
           }
       }
