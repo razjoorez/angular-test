@@ -27,6 +27,7 @@
       </div>
     </ng-container>
       <div  *ngIf=" regSelected$ | async as regs "  class="countries dropdown">
+        <h3>Please select a Country</h3>
         <button class="btn btn-secondary dropdown-toggle form-control" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           Countries of {{regs}}
         </button>
