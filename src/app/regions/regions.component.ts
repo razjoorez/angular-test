@@ -26,6 +26,7 @@ export class RegionsComponent {
       this.initRegions$ = this.store.select(getInitialRegions);
       this.regSelected$ = this.store.select(getRegionSelected);
       this.countries$ = this.store.select(getCountries);
+      this.getRegionSelected();
   }
 
   selectReg(region: string) {
@@ -36,6 +37,7 @@ export class RegionsComponent {
     if(region==='Asia') this.store.dispatch(regionsActions.getAsia());
     this.countries$ = this.countryService.getCountries(region);
     this.regionSelected = true;
+
 
   }
 
@@ -50,5 +52,12 @@ export class RegionsComponent {
     this.router.navigate(['country-details']);
   }
 
+  getRegionSelected() {
+    let value =''
+    this.store.select(getRegionSelected).pipe().subscribe(
+      (val)=> value = val
+    )
+    if (value!=='') this.regionSelected = true;
+  }
 
 }
