@@ -1,0 +1,17 @@
+/* .icon-small {
+  width: 20px;
+} */
+svg {
+  width: 20px;
+}
+
+hr {
+  width: 100%;
+  display: block;
+  margin-top: 66px;
+}
+
+.card-body{
+  padding: 20px;
+  background-color: #e5ecf26e;
+}
